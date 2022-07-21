@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 var VideoPlayer = ({video}) => (
-  !video
+  (JSON.stringify(video) === '{}')
     ? <div className="video-player">Please wait...</div>
     : <div className="video-player">
       <div className="embed-responsive embed-responsive-16by9">
