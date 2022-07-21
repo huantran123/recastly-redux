@@ -1,20 +1,14 @@
 import React from 'react';
 
- 
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      value: ''
-    };
-  }
+class Search extends React.Component {
 
   handleInputChange(e) {
-    this.props.getYouTubeVideos(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
+    // this.props.getYouTubeVideos(e.target.value);
+    // this.setState({
+    //   value: e.target.value
+    // });
+    this.props.handleSearchInputChange(e.target.value);
   }
 
   render() {
@@ -23,7 +17,6 @@ class Search extends React.Component {
         <input
           className="form-control"
           type="text"
-          value={this.state.value}
           onChange={this.handleInputChange.bind(this)}
         />
         <button className="btn hidden-sm-down">
